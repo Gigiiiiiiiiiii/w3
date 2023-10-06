@@ -29,6 +29,11 @@ plastic_data_all <- data2 %>%
   left_join(plastic_data_all, by = "code")
 
 # Member 3 write code to load File 3 data here:
+data3 <- read_tsv("data/UN_country_population.tsv")
+plastic_data_all <- data3 %>%
+  select(-name) %>%
+  right_join(plastic_data_all, by = "code")
+
 
 
 
